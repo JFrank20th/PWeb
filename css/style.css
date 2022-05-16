@@ -1,0 +1,65 @@
+/*Fuente de google*/
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+body{
+    /*font-family: 'Lobster', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/*Fuente del menu*/
+#menu a{
+    font-size: 18px;
+    font-weight: bold;
+    color: #3f3f3f;
+}
+
+#menu button{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*Imagenes en movieminto*/
+.parra{
+    font-size: 25px;
+    color:beige;
+}
+.titulos{
+    font-size: 40px;
+    color:aliceblue;
+}
+.marca{
+    font-size: 30px;
+}
+
+.dropdown-item{
+    font-family: 'Lobster', sans-serif;
+}
+
+/* Caratulas*/
+.carousel-inner{
+    max-height: 28rem;
+}
+
+.carousel-item{
+    max-height: 28rem;
+}
+
+.img:hover{
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+}
+
+/* Margenes del logeo */
+.margenes{
+    margin: 10px 500px 10px 500px;
+    text-align: center;
+    border-radius:10px;
+    
+}
+
+.text-primary{
+    text-align: center;
+}
+

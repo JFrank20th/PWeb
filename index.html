@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/utilities.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <!-- Hoja CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Estrellas -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>
+    <!-- Icono de la pagina -->
+    <link rel="icon" type="img/png" href="img/icono.png" />
+    <title>Reviews</title>
+    <!--Fuente -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;0,900;1,800&family=Open+Sans:wght@300;400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!--  ENCABEZADO -->
+    <header class="header" id="inicio">
+        <nav class=" navbar-expand-lg navbar-light bg-light p-3" id="menu">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <span class="marca text-primary">Reviews</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Generos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Accion</a></li>
+                                <li><a class="dropdown-item" href="#">Aventura</a></li>
+                                <li><a class="dropdown-item" href="#">Biografia</a></li>
+                                <li><a class="dropdown-item" href="#">Comedia</a></li>
+                                <li><a class="dropdown-item" href="#">Documentales</a></li>
+                                <li><a class="dropdown-item" href="#">Romance</a></li>
+                                <li><a class="dropdown-item" href="#">Ciencia Ficcion</a></li>
+                                <li><a class="dropdown-item" href="#">Drama</a></li>
+                                <li><a class="dropdown-item" href="#">Terror</a></li>
+                                <li><a class="dropdown-item" href="#">Belico</a></li>
+                                <li><a class="dropdown-item" href="#">Crimen</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Peliculas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Estrenos</a></li>
+                                <li><a class="dropdown-item" href="#">Ranking</a></li>
+                                <li><a class="dropdown-item" href="#">Mas Vistas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Series
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Series</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"
+                            autofocus="autofocus" />
+                        <button class="btn btn-primary btn-primary-btn-outline-success" type="submit">
+                            Buscar
+                        </button>
+                        <br>
+                    </form>
+                    <a href="register.html" class="href">
+                            <button class="btn btn-primary btn-primary-btn-outline-success"
+                                type="submit">Registrarse</button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="services contenedor" id="servicio">
+            <!--  IMAGENES EN MOVIMIENTO-->
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <!--  Imagen 1 -->
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="./img/Batman.jpg" class="d-block w-100" alt="img1" />
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3 class="titulos">The Batman</h3>
+                            <p class="parra">Batman explora la corrupción existente en la ciudad de Gotham y el vínculo
+                                de
+                                esta
+                                con su
+                                propia
+                                familia.</p>
+                        </div>
+                    </div>
+
+                    <!--  Imagen 2 -->
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="./img/moonfall.jpeg" class="d-block w-100" alt="img2" />
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3 class="titulos">Moonfall</h3>
+                            <p class="parra">El mundo se enfrenta a la posibilidad de la extinción porque una fuerza
+                                desconocida
+                                empuja a la
+                                luna de su órbita rumbo a la Tierra.</p>
+                        </div>
+                    </div>
+
+                    <!--  Imagen 3 -->
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="./img/UNcharted.jpeg" class="d-block w-100" alt="img3" />
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3 class="titulos">Uncharted</h3>
+                            <p class="parra">El cazador de tesoros Victor Sullivan recluta a Nathan Drake para que lo
+                                ayude
+                                a
+                                recuperar una
+                                fortuna de 500 años de antigüedad.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!--  Cuerpo de la pagina -->
+        <section class="w-50 mx-auto text-center pt-5" id="intro">
+            <div>
+
+                <iframe onmouseover="mostrarFecha()" onmouseout="borrarFecha" width="560" height="315"
+                    src="https://www.youtube.com/embed/lYkhKB5Hwh0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <h6><a href="https://www.marvel.com/" target="_blank">Ir a Ther Marvel</a></h6>
+            <h1 class="p3 fs-2 border-top border-3">
+                <span class="text-primary">Peliculas</span>
+            </h1>
+            <br>
+        </section>
+
+        <!--  Caratulas -->
+        <section class="gallery w-100" id="portafolio">
+            <div class="contenedor">
+                <div class="contenedor-galeria row w-75 mx-auto" id="servicios-fila-1">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galeria" src="./img/Thor.jpg" alt="desarrollo" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1">Thor</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galeria" src="./img/antman.jpg" alt="concepto" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1 icono-wrap">AntMan</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12 ">
+                        <img class="img-galeria" src="./img/vengadores.jpg" alt="concepto" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1 icono-wrap">Vengadores</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 ">
+                        <img class="img-galeria" src="./img/capitan.jpg" alt="concepto" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1 icono-wrap">Capitan America</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row w-75 mx-auto" id="servicios-fila-2">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galeria" src="./img/civilwar.jpg" alt="desarrollo" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1">Capitan America - Civil War</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galeria" src="./img/cruela.jpg" alt="concepto" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1 icono-wrap">Cruela</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12 ">
+                        <img class="img-galeria" src="./img/gg.jpeg" alt="concepto" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1 icono-wrap">Guardianes de la Galaxia Vol.2</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 ">
+                        <img class="img-galeria" src="./img/gg.jpg" alt="concepto" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1 icono-wrap">Guardianes de la Galaxia </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row w-75 mx-auto" id="servicios-fila-3">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galeria" src="./img/ironman.jpg" alt="desarrollo" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1">Iron Man</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galeria" src="./img/moonfall.jpeg" alt="concepto" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1 icono-wrap">Moonfall</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12 ">
+                        <img class="img-galeria" src="./img/panter.jpg" alt="concepto" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1 icono-wrap">Pantera Negra</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 ">
+                        <img class="img-galeria" src="./img/ragnarock.png" alt="concepto" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1 icono-wrap">Thor Ragnarock</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row w-75 mx-auto" id="servicios-fila-4">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galeria" src="./img/spiderman.jpg" alt="desarrollo" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1">Spider-Man</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <img class="img-galeria" src="./img/strange.jpg" alt="concepto" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1 icono-wrap">Dr. Strange</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12 ">
+                        <img class="img-galeria" src="./img/UNcharted.jpeg" alt="concepto" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1 icono-wrap">Uncharted</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 ">
+                        <img class="img-galeria" src="./img/Batman.jpg" alt="concepto" width="180" height="230">
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1 icono-wrap">The Batman</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <!--  Puntuacion de estrella -->
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Calificacion Peliculas</h1>
+                </div>
+                <div class="card-body">
+                    <div class="col-12 ">
+                        <table class="table" id="tabla_calificacion">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Pelicula</th>
+                                    <th>calificaciones</th>
+                                    <th>Puntaje</th>
+                                    <th>Accion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Thor</td>
+                                    <td>
+                                        <span class="fa fa-star" style="cursor:pointer;"
+                                            id="11"></span>
+                                        <span class="fa fa-star" style="cursor:pointer;"
+                                            id="21"></span>
+                                        <span class="fa fa-star" style="cursor:pointer;"
+                                            id="31"></span>
+                                        <span class="fa fa-star" style="cursor:pointer;"
+                                            id="41"></span>
+                                        <span class="fa fa-star" style="cursor:pointer;"
+                                            id="51"></span>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="calificacion form-control" disabled>
+                                    </td>
+                                    <td>
+                                        <button class="ver btn btn-primary">Calificar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Iron Man</td>
+                                    <td>
+                                        <span class="fa fa-star" style="cursor:pointer;"
+                                            id="12"></span>
+                                        <span class="fa fa-star" style="cursor:pointer;"
+                                            id="22"></span>
+                                        <span class="fa fa-star" style="cursor:pointer;"
+                                            id="32"></span>
+                                        <span class="fa fa-star" style="cursor:pointer;"
+                                            id="42"></span>
+                                        <span class="fa fa-star" style="cursor:pointer;"
+                                            id="52"></span>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="calificacion form-control" disabled>
+                                    </td>
+                                    <td>
+                                        <button class="ver btn btn-primary">Calificar</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Spider-Man</td>
+                                    <td>
+                                        <span class="fa fa-star" style="cursor:pointer;"
+                                            id="13"></span>
+                                        <span class="fa fa-star" style="cursor:pointer;"
+                                            id="23"></span>
+                                        <span class="fa fa-star" style="cursor:pointer;"
+                                            id="33"></span>
+                                        <span class="fa fa-star" style="cursor:pointer;"
+                                            id="43"></span>
+                                        <span class="fa fa-star" style="cursor:pointer;"
+                                            id="53"></span>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="calificacion form-control" disabled>
+                                    </td>
+                                    <td>
+                                        <button class="ver btn btn-primary">Calificar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </main>
+    
+    <div>
+        <audio class="margenes" src="img/123.mp3" controls preload autoplay loop></audio>
+    </div>
+
+    <!--  PIE DE PAGINA -->
+    <footer id="contacto" class="container-fluid bg-info d-flex justify-content-center ">
+        <div class="contenedor footer-content">
+            <div class="contact-us">
+                <h5 class="brand mt-3">
+                    Creado por Frank Joya
+                </h5>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+</html>
